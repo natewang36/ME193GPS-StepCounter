@@ -56,13 +56,13 @@ while i < len(axes):
         j += 1
     graphs[i].plot([0,time[-1]],[directional_constant*scalar*avg,directional_constant*scalar*avg], color = 'limegreen')
     graphs[i].plot([0,time[-1]],[directional_constant*-0.2*scalar*avg,directional_constant*-0.2*scalar*avg], color = 'blue')
-    graphs[i].set(ylabel=str(labels[i])+" Steps: "+str(steps))
+    graphs[i].set(ylabel=str(labels[i])+" Steps: "+str(int(steps/2)))
 
     print(steps)
     print(avg)
     print(directional_constant)
     print("-----------")
-    steps_list.append(steps)
+    steps_list.append(int(steps/2))
     i += 1
 
 steps_averaged = sum(steps_list)/len(steps_list)
